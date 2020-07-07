@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloWorld"
+             xmlns:vm="clr-namespace:HelloWorld.ViewModels;assembly=HelloWorld"
+             x:DataType="vm:HelloWorldViewModel"
+             x:Class="HelloWorld.MainPage">
+
+    <StackLayout 
+        VerticalOptions="CenterAndExpand"
+        Margin="20" >
+        
+        <Entry Text="{Binding Text}" />
+        
+        <!-- Place new controls here -->
+        <Label Text="{Binding Text}" 
+           HorizontalOptions="Center" />
+        
+        <Button 
+            Command="{Binding ResetCommand}"
+            Text="Reset" />
+        
+    </StackLayout>
+
+</ContentPage>
